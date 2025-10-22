@@ -1,0 +1,31 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../home"
+    },
+    {
+      "path": "../signup"
+    },
+    {
+      "path": "../login"
+    },
+    {
+      "path": "../../ui/utils"
+    },
+    {
+      "path": "../../ui/hooks"
+    },
+    {
+      "path": "../../ui/store"
+    },
+    {
+      "path": "../../ui/contexts"
+    },
+    {
+      "path": "../../ui/components"
+    }
+  ],
+  "extends": "../../../tsconfig.base.json"
+}

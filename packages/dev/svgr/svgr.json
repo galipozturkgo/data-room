@@ -1,0 +1,27 @@
+{
+  "index": true,
+  "typescript": true,
+  "expandProps": true,
+  "exportType": "named",
+  "ignoreExisting": false,
+  "jsxRuntime": "automatic",
+  "ref": true,
+  "replaceAttrValues": { "#000": "currentColor" },
+  "svgo": true,
+  "svgoConfig": {
+    "plugins": [
+      {
+        "name": "preset-default",
+        "params": {
+          "overrides": { "removeViewBox": false }
+        }
+      },
+      {
+        "name": "addAttributesToSVGElement",
+        "params": {
+          "attributes": ["width=24", "height=24", "fill='none'"]
+        }
+      }
+    ]
+  }
+}

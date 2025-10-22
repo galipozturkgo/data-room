@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-base-50: 250 250 249;
+    --color-base-100: 245 245 244;
+    --color-base-200: 231 229 228;
+    --color-base-300: 214 211 209;
+    --color-base-400: 166 160 155;
+    --color-base-500: 121 113 107;
+    --color-base-600: 87 83 77;
+    --color-base-700: 68 64 59;
+    --color-base-800: 41 37 36;
+    --color-base-900: 28 25 23;
+    --color-base-950: 12 10 9;
+
+    --color-white: 255 255 255;
+    --color-black: 0 0 0;
+    --color-accent: 164 123 209;
+    --color-red: 255 32 86;
+    --color-green: 0 188 125;
+    --color-blue: 97 95 255;
+    --color-orange: 255 105 0;
+    --color-yellow: 240 177 0;
+  }
+
+  .light {
+    /* Background colors */
+    --color-background-base: var(--color-base-50);
+    --color-background-primary: var(--color-base-800);
+    --color-background-muted: var(--color-base-500);
+
+    --color-background-white: var(--color-white);
+    --color-background-black: var(--color-black);
+    --color-background-accent: var(--color-accent);
+    --color-background-red: var(--color-red);
+    --color-background-green: var(--color-green);
+    --color-background-blue: var(--color-blue);
+    --color-background-orange: var(--color-orange);
+    --color-background-yellow: var(--color-yellow);
+
+    /* Text colors */
+    --color-text-inverted: var(--color-base-100);
+    --color-text-primary: var(--color-base-700);
+    --color-text-muted: var(--color-base-400);
+
+    --color-text-white: var(--color-white);
+    --color-text-black: var(--color-black);
+    --color-text-accent: var(--color-accent);
+    --color-text-red: var(--color-red);
+    --color-text-green: var(--color-green);
+    --color-text-blue: var(--color-blue);
+    --color-text-orange: var(--color-orange);
+    --color-text-yellow: var(--color-yellow);
+
+    /* Border colors */
+    --color-border-primary: var(--color-base-800);
+    --color-border-muted: var(--color-base-500);
+
+    --color-border-accent: var(--color-accent);
+    --color-border-red: var(--color-red);
+    --color-border-green: var(--color-green);
+    --color-border-blue: var(--color-blue);
+    --color-border-orange: var(--color-orange);
+    --color-border-yellow: var(--color-yellow);
+  }
+
+  .dark {
+  }
+
+  html {
+    @apply h-[100dvh] overflow-hidden;
+  }
+
+  body {
+    @apply h-[100dvh] overflow-auto;
+  }
+
+  #root {
+    @apply h-full bg-skin-base;
+  }
+
+  * {
+    @apply scrollbar-thin;
+    @apply outline-none;
+  }
+}
+
+@layer components {
+  .dark {
+    color-scheme: dark;
+  }
+  .focus-visible {
+    @apply focus-visible:animate-ring-shrink;
+  }
+  .focus-within {
+    @apply focus-within:animate-ring-shrink;
+  }
+  .focus-none {
+    @apply focus-visible:animate-none focus-within:animate-none;
+  }
+  .floating-panel {
+    @apply shadow-lg bg-skin-base rounded-2xl border border-skin-primary/10;
+  }
+  .slider-thumb::-webkit-slider-thumb {
+    @apply appearance-none w-3.5 h-3.5 border-none rounded-full bg-skin-accent;
+  }
+  .slider-thumb::-moz-range-thumb {
+    @apply appearance-none w-3.5 h-3.5 border-none rounded-full bg-skin-accent;
+  }
+}

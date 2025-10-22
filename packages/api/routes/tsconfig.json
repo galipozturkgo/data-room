@@ -1,0 +1,19 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../utils"
+    },
+    {
+      "path": "../../shared/types"
+    },
+    {
+      "path": "../models"
+    },
+    {
+      "path": "./tsconfig.lib.json"
+    }
+  ]
+}

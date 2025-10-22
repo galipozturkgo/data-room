@@ -1,0 +1,10 @@
+{
+  "name": "@dataroom/app",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "tags": [
+      "apps:app"
+    ]
+  }
+}

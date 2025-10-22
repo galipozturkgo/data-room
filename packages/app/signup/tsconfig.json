@@ -1,0 +1,25 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../../ui/utils"
+    },
+    {
+      "path": "../../ui/contexts"
+    },
+    {
+      "path": "../../shared/utils"
+    },
+    {
+      "path": "../../shared/types"
+    },
+    {
+      "path": "../../ui/queries"
+    },
+    {
+      "path": "../../ui/components"
+    }
+  ],
+  "extends": "../../../tsconfig.base.json"
+}

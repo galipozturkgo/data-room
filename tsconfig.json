@@ -1,0 +1,58 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/ui/components"
+    },
+    {
+      "path": "./packages/shared/types"
+    },
+    {
+      "path": "./packages/shared/utils"
+    },
+    {
+      "path": "./packages/ui/contexts"
+    },
+    {
+      "path": "./packages/api/models"
+    },
+    {
+      "path": "./packages/api/routes"
+    },
+    {
+      "path": "./packages/app/shared"
+    },
+    {
+      "path": "./packages/ui/queries"
+    },
+    {
+      "path": "./packages/api/utils"
+    },
+    {
+      "path": "./packages/app/login"
+    },
+    {
+      "path": "./packages/app/home"
+    },
+    {
+      "path": "./packages/ui/hooks"
+    },
+    {
+      "path": "./packages/ui/store"
+    },
+    {
+      "path": "./packages/ui/utils"
+    },
+    {
+      "path": "./apps/api"
+    },
+    {
+      "path": "./apps/app"
+    },
+    {
+      "path": "./packages/app/signup"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+import { classes, classNames, IconProps } from '@dataroom/ui-utils';
+import type { SVGProps } from 'react';
+import { forwardRef, Ref } from 'react';
+const SvgApple = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    viewBox="0 0 24 24"
+    ref={ref}
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      d="M17.552 12.569c-.01-1.639.732-2.876 2.232-3.787-.84-1.2-2.107-1.861-3.782-1.99-1.585-.126-3.317.923-3.951.923-.67 0-2.206-.88-3.412-.88-2.491.04-5.139 1.988-5.139 5.948q0 1.755.643 3.626c.572 1.639 2.634 5.657 4.787 5.59 1.125-.027 1.92-.8 3.384-.8 1.42 0 2.157.8 3.411.8 2.17-.031 4.037-3.683 4.582-5.327-2.912-1.37-2.755-4.018-2.755-4.103m-2.528-7.332c1.22-1.446 1.108-2.764 1.072-3.237-1.076.063-2.322.732-3.032 1.558-.781.884-1.241 1.978-1.143 3.21 1.166.09 2.228-.508 3.103-1.53Z"
+    />
+  </svg>
+);
+const SvgAppleForwardRef = forwardRef(SvgApple);
+const SvgAppleWrapper = (
+  { size = 'base', className, ...props }: IconProps,
+  ref: React.Ref<SVGSVGElement>
+) => (
+  <SvgAppleForwardRef
+    ref={ref}
+    className={classNames(size && styles.sizes[size], className)}
+    {...props}
+  />
+);
+const styles = {
+  sizes: {
+    xs: classes('w-2.5', 'h-2.5'),
+    sm: classes('w-3.5', 'h-3.5'),
+    base: classes('w-4.5', 'h-4.5'),
+    md: classes('w-5.5', 'h-5.5'),
+    lg: classes('w-6.5', 'h-6.5'),
+  },
+};
+export const AppleIcon = forwardRef(SvgAppleWrapper);

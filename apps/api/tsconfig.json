@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../../packages/api/utils"
+    },
+    {
+      "path": "../../packages/api/routes"
+    }
+  ]
+}

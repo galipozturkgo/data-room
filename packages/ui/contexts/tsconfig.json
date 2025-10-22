@@ -1,0 +1,19 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../queries"
+    },
+    {
+      "path": "../utils"
+    },
+    {
+      "path": "../components"
+    },
+    {
+      "path": "../../shared/types"
+    }
+  ],
+  "extends": "../../../tsconfig.base.json"
+}

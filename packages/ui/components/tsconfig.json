@@ -1,0 +1,19 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../hooks"
+    },
+    {
+      "path": "../../shared/utils"
+    },
+    {
+      "path": "../../shared/types"
+    },
+    {
+      "path": "../utils"
+    }
+  ],
+  "extends": "../../../tsconfig.base.json"
+}
