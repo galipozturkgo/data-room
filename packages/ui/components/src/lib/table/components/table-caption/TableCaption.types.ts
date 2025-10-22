@@ -1,9 +1,10 @@
-import { ButtonProps } from '../../button/button/Button.types';
+import { ButtonProps } from '../../../button/components/button/Button.types';
 
 export type TableCaptionProps = {
   title?: string;
   search?: boolean;
   refresh?: ButtonProps;
-  children?: React.ReactNode;
   className?: string;
+  children?: React.ReactNode;
+  bottom?: React.ReactNode;
 };

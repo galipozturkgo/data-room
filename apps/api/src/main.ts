@@ -1,6 +1,6 @@
 import 'express-async-errors';
 
-import { authRoutes, fileRoutes } from '@dataroom/api-routes';
+import { authRoutes, fileRoutes, folderRoutes } from '@dataroom/api-routes';
 import {
   cookieSession,
   cookieSessionSave,
@@ -43,6 +43,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/api/auth/', authRoutes);
+app.use('/api/folder/', folderRoutes);
 app.use('/api/file/', fileRoutes);
 
 app.all('*', (req) => {

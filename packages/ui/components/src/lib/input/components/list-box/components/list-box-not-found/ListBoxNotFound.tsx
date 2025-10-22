@@ -9,7 +9,7 @@ const ListBoxNotFoundBase: React.FC<ListBoxNotFoundProps> = ({ className }) => {
   return (
     <div className={classNames(styles.root, className)}>
       <NoDataIcon />
-      <span>Not Found</span>
+      <span>Not found</span>
     </div>
   );
 };

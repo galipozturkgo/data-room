@@ -42,7 +42,7 @@ export const TitleBase = <T extends React.ElementType = 'h1'>({
 const styles = {
   root: classes('w-full', 'text-skin-accent'),
   children: classes('flex', 'items-center', 'gap-1.5'),
-  title: classes('pl-1', 'font-medium', 'text-xl'),
+  title: classes('pl-1', 'font-medium', 'text-lg'),
 };
 
 export const Title = TitleBase;

@@ -7,7 +7,7 @@ export type SignFileParams = {
   prefix: string;
   name: string;
   type: string;
-  parent?: string;
+  folder: string;
 };
 
 export type SingedFile = {

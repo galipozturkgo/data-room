@@ -26,7 +26,7 @@ const TableNotFoundRowBase: React.FC<TableNotFoundRowProps> = ({
 const styles = {
   tr: classes('w-full'),
   td: classes('bg-skin-silent'),
-  feedback: classes('h-12', 'rounded-none', 'items-center', 'justify-center'),
+  feedback: classes('h-40', 'rounded-none', 'items-center', 'justify-center'),
 };
 
 export const TableNotFoundRow = TableNotFoundRowBase;

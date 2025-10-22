@@ -13,13 +13,7 @@ const rawBaseQuery = fetchBaseQuery({
   responseHandler: 'content-type',
 }) as BaseQueryFn<string | FetchArgs, unknown, ServerError, unknown>;
 
-const TagTypes = [
-  'Users',
-  'AuthUser',
-  'Languages',
-  'Namespaces',
-  'Resources',
-] as const;
+const TagTypes = ['Folders'] as const;
 
 export type TagType = (typeof TagTypes)[number];
 

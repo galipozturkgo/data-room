@@ -8,14 +8,14 @@ import {
 } from '@dataroom/api-utils';
 
 type AddFile = PutObject & {
-  user?: string;
-  parent?: string;
+  user: string;
+  folder: string;
   sign?: boolean;
 };
 
 export const addFile = async ({
   user,
-  parent,
+  folder,
   prefix,
   name,
   type,
@@ -31,7 +31,7 @@ export const addFile = async ({
 
   await FileModel.add({
     user,
-    parent,
+    folder,
     key,
     type,
     name,

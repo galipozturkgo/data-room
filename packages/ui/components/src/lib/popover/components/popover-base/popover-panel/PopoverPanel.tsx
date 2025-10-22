@@ -1,7 +1,7 @@
 'use client';
 
-import { PopoverPanel as HeadlessPopover } from '@headlessui/react';
 import { classes, classNames } from '@dataroom/ui-utils';
+import { PopoverPanel as HeadlessPopover } from '@headlessui/react';
 import React from 'react';
 
 import { Floating } from '../../../../floating/Floating';

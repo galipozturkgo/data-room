@@ -31,7 +31,7 @@ const TableHeadBase: React.FC<TableHeadProps> = ({ children, className }) => {
 };
 
 const styles = {
-  root: classes('text-sm', 'bg-skin-inverted', 'text-skin-inverted'),
+  root: classes('text-sm', 'bg-skin-primary', 'text-skin-inverted'),
 };
 
 export const TableHead = TableHeadBase;

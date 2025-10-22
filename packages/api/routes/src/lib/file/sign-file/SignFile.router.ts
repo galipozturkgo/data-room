@@ -11,11 +11,11 @@ router.post<never, SingedFile, SignFileParams>(
   requireAuth,
   async (req, res) => {
     const { id: user } = req.user;
-    const { prefix, name, type, parent } = req.body;
+    const { prefix, name, type, folder } = req.body;
 
     const { key, signed } = await addFile({
       user,
-      parent,
+      folder,
       prefix,
       name,
       type,

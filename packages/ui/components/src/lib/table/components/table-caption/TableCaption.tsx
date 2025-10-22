@@ -13,6 +13,7 @@ const TableCaptionBase: React.FC<TableCaptionProps> = ({
   search = true,
   refresh,
   children,
+  bottom,
 }) => {
   return (
     <caption className={styles.root}>
@@ -26,12 +27,13 @@ const TableCaptionBase: React.FC<TableCaptionProps> = ({
         </div>
         {search && <CaptionSearch />}
       </div>
+      {bottom}
     </caption>
   );
 };
 
 const styles = {
-  root: classes('bg-skin-primary', 'text-start', 'px-4', 'py-3'),
+  root: classes('text-start', 'py-3'),
   title: classes('flex', 'items-center', 'space-x-3'),
   container: classes('flex', 'justify-between', 'items-end'),
   head: classes('flex', 'items-center', 'space-x-3'),

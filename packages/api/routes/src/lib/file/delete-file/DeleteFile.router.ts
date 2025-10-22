@@ -1,12 +1,12 @@
 import { FileModel } from '@dataroom/api-models';
 import { requireAuth } from '@dataroom/api-utils';
-import { DeleteFileRequest } from '@dataroom/shared-types';
+import { DeleteFile } from '@dataroom/shared-types';
 import { formatISO } from 'date-fns';
 import express from 'express';
 
 const router = express.Router();
 
-router.delete<never, never, DeleteFileRequest>(
+router.delete<never, never, DeleteFile>(
   '/delete',
   requireAuth,
   async (req, res) => {

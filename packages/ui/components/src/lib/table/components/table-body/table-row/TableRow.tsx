@@ -22,7 +22,12 @@ const TableRowBase: React.FC<TableRowProps> = ({
 };
 
 const styles = {
-  root: classes('border-b', 'border-skin-silent', 'text-skin-muted', 'text-sm'),
+  root: classes(
+    'border-b',
+    'border-skin-primary/15',
+    'text-skin-primary',
+    'text-sm',
+  ),
 };
 
 export const TableRow = TableRowBase;

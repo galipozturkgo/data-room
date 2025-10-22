@@ -4,8 +4,8 @@ import mongoose from 'mongoose';
 import { UserDoc } from '../user/User.model';
 
 interface FileAttrs {
-  user?: UserDoc | string;
-  parent?: string;
+  user: UserDoc | string;
+  folder: string;
   key: string;
   name: string;
   type: string;
@@ -14,8 +14,8 @@ interface FileAttrs {
 }
 
 export interface FileDoc extends mongoose.Document {
-  user?: UserDoc | string;
-  parent?: string;
+  user: UserDoc | string;
+  folder: string;
   key: string;
   name: string;
   type: string;
@@ -32,8 +32,13 @@ const schema = new mongoose.Schema({
   user: {
     type: mongoose.Types.ObjectId,
     ref: 'User',
+    required: true,
   },
-  parent: String,
+  folder: {
+    type: mongoose.Types.ObjectId,
+    ref: 'Folder',
+    required: true,
+  },
   key: {
     type: String,
     required: true,

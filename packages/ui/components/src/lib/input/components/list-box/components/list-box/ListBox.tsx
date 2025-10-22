@@ -7,9 +7,9 @@ import React, { Fragment, useCallback, useState } from 'react';
 import { Divider } from '../../../../../divider/components/Divider';
 import { Input } from '../../../input/components/input/Input';
 import { BaseListBox } from '../list-box-base/ListBoxBase';
-import { ListBoxOption, ListBoxProps, TValues } from './ListBox.types';
+import { ListBoxOption, ListBoxProps, ListBoxValues } from './ListBox.types';
 
-const ListBoxBase = <T extends TValues>(
+const ListBoxBase = <T extends ListBoxValues>(
   {
     options = [],
     nullable,

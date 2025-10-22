@@ -1,10 +1,10 @@
 'use client';
 
+import { classes, classNames } from '@dataroom/ui-utils';
 import {
   DialogBackdrop as HeadlessDialogBackdrop,
   TransitionChild as HeadlessTransitionChild,
 } from '@headlessui/react';
-import { classes, classNames } from '@dataroom/ui-utils';
 import ReactDOM from 'react-dom';
 
 import { useDialog } from '../../context/DialogContext';

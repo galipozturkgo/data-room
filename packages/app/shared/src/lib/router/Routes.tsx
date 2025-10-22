@@ -1,8 +1,4 @@
-import {
-  NotFound,
-  RouterMenuItem,
-  TemplateIcon,
-} from '@dataroom/ui-components';
+import { NotFound, RouterMenuItem } from '@dataroom/ui-components';
 import { AuthRoute, NonAuthRoute } from '@dataroom/ui-contexts';
 import { lazy } from 'react';
 
@@ -58,7 +54,6 @@ export const getRoutes = (
         index: true,
         path: '/',
         title: 'Home',
-        icon: <TemplateIcon />,
         element: <Home />,
       },
     ],

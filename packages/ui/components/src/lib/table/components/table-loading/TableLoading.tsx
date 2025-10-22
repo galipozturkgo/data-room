@@ -16,14 +16,7 @@ const TableLoadingBase: React.FC<TableLoadingProps> = ({ isLoading }) => {
 };
 
 const styles = {
-  root: classes(
-    'absolute',
-    'top-0',
-    'bottom-0',
-    'z-10',
-    'bg-skin-primary',
-    'bg-opacity-40',
-  ),
+  root: classes('absolute', 'top-0', 'bottom-0', 'z-10', 'bg-skin-base/40'),
   spinner: classes('absolute', 'top-[52.5%]'),
 };
 

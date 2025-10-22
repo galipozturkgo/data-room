@@ -1,4 +1,4 @@
-export type DeleteFileRequest = {
+export type DeleteFile = {
   key: string;
   soft?: boolean;
 };

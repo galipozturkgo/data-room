@@ -28,5 +28,21 @@
     "eslint.config.mjs"
   ],
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
-  "references": []
+  "references": [
+    {
+      "path": "../../shared/types/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/queries/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/contexts/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/components/tsconfig.lib.json"
+    },
+    {
+      "path": "../../ui/utils/tsconfig.lib.json"
+    }
+  ]
 }

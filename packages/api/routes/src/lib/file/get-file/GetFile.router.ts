@@ -1,13 +1,13 @@
 import { FileModel } from '@dataroom/api-models';
 import { NotFound, requireAuth } from '@dataroom/api-utils';
-import { GetFileParams, GetFileResponse } from '@dataroom/shared-types';
+import { GetFile, GetFileParams } from '@dataroom/shared-types';
 import express from 'express';
 
 import { getFile } from '../File.commands';
 
 const router = express.Router();
 
-router.get<never, GetFileResponse, never, GetFileParams>(
+router.get<never, GetFile, never, GetFileParams>(
   '/get',
   requireAuth,
   async (req, res) => {

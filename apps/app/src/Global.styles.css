@@ -90,24 +90,26 @@
 }
 
 @layer components {
-  .dark {
-    color-scheme: dark;
-  }
   .focus-visible {
     @apply focus-visible:animate-ring-shrink;
   }
+
   .focus-within {
     @apply focus-within:animate-ring-shrink;
   }
+
   .focus-none {
     @apply focus-visible:animate-none focus-within:animate-none;
   }
+
   .floating-panel {
     @apply shadow-lg bg-skin-base rounded-2xl border border-skin-primary/10;
   }
+
   .slider-thumb::-webkit-slider-thumb {
     @apply appearance-none w-3.5 h-3.5 border-none rounded-full bg-skin-accent;
   }
+
   .slider-thumb::-moz-range-thumb {
     @apply appearance-none w-3.5 h-3.5 border-none rounded-full bg-skin-accent;
   }

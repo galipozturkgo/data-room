@@ -2,6 +2,6 @@ export type GetFileParams = {
   key: string;
 };
 
-export type GetFileResponse = {
+export type GetFile = {
   url: string;
 };

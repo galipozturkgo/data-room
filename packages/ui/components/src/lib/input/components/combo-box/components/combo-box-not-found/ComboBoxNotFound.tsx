@@ -11,7 +11,7 @@ const ComboBoxNotFoundBase: React.FC<ComboBoxNotFoundProps> = ({
   return (
     <div className={classNames(styles.root, className)}>
       <NoDataIcon />
-      <span>Not Found</span>
+      <span>Not found</span>
     </div>
   );
 };

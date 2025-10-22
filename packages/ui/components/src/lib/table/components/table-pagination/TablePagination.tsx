@@ -24,7 +24,6 @@ const styles = {
     'justify-end',
     'text-sm',
     'p-4',
-    'bg-skin-primary',
   ),
 };
 

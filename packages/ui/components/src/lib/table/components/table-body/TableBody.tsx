@@ -1,6 +1,5 @@
 'use client';
 
-import { classes, classNames } from '@dataroom/ui-utils';
 import { Fragment } from 'react';
 
 import { useTable } from '../table-context/TableContext';
@@ -19,7 +18,7 @@ const TableBodyBase: React.FC<TableBodyProps> & {
   const rows = table.getRowModel().rows;
 
   return (
-    <tbody className={classNames(styles.root, className)}>
+    <tbody className={className}>
       {rows.length === 0
         ? NotFoundRow || <TableNotFoundRow />
         : rows.map((current) => (
@@ -30,10 +29,6 @@ const TableBodyBase: React.FC<TableBodyProps> & {
           ))}
     </tbody>
   );
-};
-
-const styles = {
-  root: classes('bg-skin-primary'),
 };
 
 TableBodyBase.Row = TableRow;
