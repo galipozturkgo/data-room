@@ -1,10 +1,10 @@
 'use client';
 
+import { classes, classNames } from '@dataroom/ui-utils';
 import {
   DialogPanel as HeadlessDialogPanel,
   TransitionChild as HeadlessTransitionChild,
 } from '@headlessui/react';
-import { classes, classNames } from '@dataroom/ui-utils';
 
 import { DialogPanelProps } from './DialogPanel.types';
 

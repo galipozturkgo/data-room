@@ -1,7 +1,7 @@
 'use client';
 
-import { Description as HeadlessDescription } from '@headlessui/react';
 import { classes, classNames } from '@dataroom/ui-utils';
+import { Description as HeadlessDescription } from '@headlessui/react';
 
 import { DialogDescriptionProps } from './DialogDescription.types';
 

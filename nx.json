@@ -48,7 +48,8 @@
     {
       "plugin": "@nx/eslint/plugin",
       "options": {
-        "targetName": "lint"
+        "targetName": "lint",
+        "lintFilePatterns": ["packages/**/*.{ts,tsx}", "apps/**/*.{ts,tsx}"]
       }
     },
     {

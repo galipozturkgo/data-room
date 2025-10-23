@@ -1,7 +1,7 @@
 'use client';
 
-import { ListboxOptions as HeadlessListBoxOptions } from '@headlessui/react';
 import { classes, classNames } from '@dataroom/ui-utils';
+import { ListboxOptions as HeadlessListBoxOptions } from '@headlessui/react';
 
 import { Floating } from '../../../../../floating/Floating';
 import { ListBoxPanelProps } from './ListBoxPanel.types';

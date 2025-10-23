@@ -1,7 +1,7 @@
 'use client';
 
-import { ComboboxOptions as HeadlessComboBoxOptions } from '@headlessui/react';
 import { classes, classNames } from '@dataroom/ui-utils';
+import { ComboboxOptions as HeadlessComboBoxOptions } from '@headlessui/react';
 
 import { Floating } from '../../../../../floating/Floating';
 import { ComboBoxClear } from '../combo-box-clear/ComboBoxClear';

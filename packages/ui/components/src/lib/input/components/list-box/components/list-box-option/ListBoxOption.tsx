@@ -1,7 +1,7 @@
 'use client';
 
-import { ListboxOption as HeadlessListBoxOption } from '@headlessui/react';
 import { classes, classNames } from '@dataroom/ui-utils';
+import { ListboxOption as HeadlessListBoxOption } from '@headlessui/react';
 
 import { ListBoxValues } from '../list-box/ListBox.types';
 import { ListBoxOptionProps } from './ListBoxOption.types';

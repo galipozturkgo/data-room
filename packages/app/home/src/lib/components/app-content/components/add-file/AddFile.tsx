@@ -3,7 +3,7 @@ import { AddFileProps } from './AddFile.types';
 import { useFileDropzone } from '../../hooks/useFileDropzone';
 
 const AddFile: React.FC<AddFileProps> = ({ onClose }) => {
-  const { getRootProps, getInputProps } = useFileDropzone(onClose);
+  const { getRootProps, getInputProps } = useFileDropzone({ onClose });
 
   return (
     <div {...getRootProps()}>

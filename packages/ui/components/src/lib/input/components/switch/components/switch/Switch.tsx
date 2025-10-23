@@ -1,7 +1,7 @@
 'use client';
 
-import { Switch as HeadlessSwitch } from '@headlessui/react';
 import { classes, classNames } from '@dataroom/ui-utils';
+import { Switch as HeadlessSwitch } from '@headlessui/react';
 import React from 'react';
 
 import { Input } from '../../../input/components/input/Input';

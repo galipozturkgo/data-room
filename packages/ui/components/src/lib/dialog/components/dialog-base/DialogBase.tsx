@@ -1,10 +1,10 @@
 'use client';
 
+import { classes, classNames } from '@dataroom/ui-utils';
 import {
   Dialog as HeadlessDialog,
   Transition as HeadlessTransition,
 } from '@headlessui/react';
-import { classes, classNames } from '@dataroom/ui-utils';
 import React from 'react';
 import { Fragment } from 'react';
 

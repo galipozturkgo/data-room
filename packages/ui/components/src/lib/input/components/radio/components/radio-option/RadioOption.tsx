@@ -1,7 +1,7 @@
 'use client';
 
-import { Radio as HeadlessRadio } from '@headlessui/react';
 import { classes, classNames } from '@dataroom/ui-utils';
+import { Radio as HeadlessRadio } from '@headlessui/react';
 import React, { Fragment } from 'react';
 
 import { Input } from '../../../input/components/input/Input';

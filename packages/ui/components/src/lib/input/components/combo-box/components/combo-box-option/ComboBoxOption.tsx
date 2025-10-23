@@ -1,7 +1,7 @@
 'use client';
 
-import { ComboboxOption as HeadlessComboBoxOption } from '@headlessui/react';
 import { classes, classNames } from '@dataroom/ui-utils';
+import { ComboboxOption as HeadlessComboBoxOption } from '@headlessui/react';
 
 import { ComboBoxValues } from '../combo-box/ComboBox.types';
 import { ComboBoxOptionProps } from './ComboBoxOption.types';
