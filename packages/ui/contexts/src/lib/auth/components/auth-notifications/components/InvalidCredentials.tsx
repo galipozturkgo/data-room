@@ -5,15 +5,13 @@ export const invalidCredentials = (
   onPasswordResetClick?: () => void,
 ): NotificationItem => {
   return {
-    title: 'ui.shared.auth.notifications.invalidCredentials.message',
+    title: 'Your credentials is incorrect',
     color: 'red',
-    description: 'ui.shared.auth.notifications.invalidCredentials.description',
+    description: 'Please check your credentials and try again',
     content: onPasswordResetClick
       ? ({ close }) => (
           <div className={styles.container}>
-            <span>
-              'ui.shared.auth.notifications.invalidCredentials.passwordReset',
-            </span>
+            <span>Forgot your password</span>
             <Button
               variant="contained"
               color="accent"
@@ -22,7 +20,7 @@ export const invalidCredentials = (
                 close();
               }}
             >
-              'ui.shared.auth.notifications.invalidCredentials.resetPassword',
+              Reset Password
             </Button>
           </div>
         )

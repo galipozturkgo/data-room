@@ -4,10 +4,9 @@ export const accountAlreadyExists = (
   onLoginClick: () => void,
 ): NotificationItem => {
   return {
-    title: 'ui.shared.auth.notifications.accountAlreadyExists.message',
+    title: 'Account already exists',
     color: 'green',
-    description:
-      'ui.shared.auth.notifications.accountAlreadyExists.description',
+    description: 'Already an account connected to the this email',
     content: ({ close }) => (
       <Button
         variant="contained"
@@ -17,7 +16,7 @@ export const accountAlreadyExists = (
           close();
         }}
       >
-        'ui.shared.auth.notifications.accountAlreadyExists.signup'
+        Log In
       </Button>
     ),
   };

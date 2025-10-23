@@ -5,16 +5,14 @@ export const accountNotFound = (
   onSignupClick?: () => void,
 ): NotificationItem => {
   return {
-    title: 'ui.shared.auth.notifications.accountNotFound.message',
+    title: 'Account not found',
     color: 'red',
-    description: 'ui.shared.auth.notifications.accountNotFound.description',
+    description: 'We could not find an account connected to this email',
 
     content: onSignupClick
       ? ({ close }) => (
           <div className={styles.container}>
-            <span>
-              ui.shared.auth.notifications.accountNotFound.createAccount
-            </span>
+            <span>Don't have an account?</span>
             <Button
               variant="contained"
               color="accent"
@@ -23,7 +21,7 @@ export const accountNotFound = (
                 close();
               }}
             >
-              'ui.shared.auth.notifications.accountNotFound.signup'
+              Sign Up
             </Button>
           </div>
         )

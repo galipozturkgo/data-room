@@ -18,7 +18,7 @@ const PreviewFile: React.FC<PreviewFileProps> = ({ signed, name }) => {
     <Fragment>
       <Tooltip title="Preview">
         <IconButton
-          color="green"
+          color="orange"
           variant="outlined"
           icon={<SearchIcon />}
           onClick={handleOpen}

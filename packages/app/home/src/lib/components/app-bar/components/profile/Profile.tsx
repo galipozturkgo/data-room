@@ -3,13 +3,16 @@ import { useAuth } from '@dataroom/ui-contexts';
 import { useLogoutMutation } from '@dataroom/ui-queries';
 import { classes } from '@dataroom/ui-utils';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 const Profile = () => {
+  const navigate = useNavigate();
   const { user, logout } = useAuth();
   const [logoutUser, { isSuccess, isLoading }] = useLogoutMutation();
 
   useEffect(() => {
     if (isSuccess) {
       logout();
+      navigate('/login');
     }
   }, [isSuccess]);
 
