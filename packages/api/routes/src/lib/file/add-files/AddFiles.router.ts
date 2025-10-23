@@ -1,6 +1,7 @@
 import { FileModel, FolderModel } from '@dataroom/api-models';
 import { NotFound, requireAuth, validateRequest } from '@dataroom/api-utils';
 import { AddFiles } from '@dataroom/shared-types';
+import { parseFileName } from '@dataroom/shared-utils';
 import express from 'express';
 
 import schema from './AddFiles.schema';
@@ -25,7 +26,12 @@ router.post<never, never, AddFiles>(
       files
         .filter((i) => i)
         .map(async (i) => {
-          await FileModel.add({ user, folder, ...i }).save();
+          await FileModel.add({
+            user,
+            folder,
+            ...i,
+            name: parseFileName(i.name).name ?? i.name,
+          }).save();
         }),
     );
 

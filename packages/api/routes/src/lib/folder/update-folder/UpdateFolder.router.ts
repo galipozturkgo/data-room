@@ -14,13 +14,13 @@ router.put<never, never, UpdateFolder>(
   async (req, res) => {
     const { id, ...rest } = req.body;
 
-    const email = await FolderModel.findById(id);
+    const folder = await FolderModel.findById(id);
 
-    if (!email) {
+    if (!folder) {
       throw new NotFound();
     }
 
-    await email.updateOne(rest);
+    await folder.updateOne(rest);
 
     res.sendStatus(200);
   },

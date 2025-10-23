@@ -9,6 +9,7 @@ import { FileIcon } from '@dataroom/ui-components';
 import DeleteFile from '../components/delete-file/DeleteFile';
 import { Fragment } from 'react/jsx-runtime';
 import PreviewFile from '../components/preview-file/PreviewFile';
+import EditFile from '../components/edit-file/EditFile';
 
 const columnHelper = createColumnHelper<FolderRowData>();
 
@@ -20,9 +21,9 @@ export const useFolderColumns = () => {
         original.row === 'folder' ? (
           <NavigateFolder name={original.name} />
         ) : (
-          <div className="flex pl-1.5 items-center">
+          <div className={styles.name}>
             <FileIcon />
-            <span className="pl-2 truncate">{original.name}</span>
+            <span className={styles.title}>{original.name}</span>
           </div>
         ),
     }),
@@ -57,6 +58,7 @@ export const useFolderColumns = () => {
             </Fragment>
           ) : (
             <Fragment>
+              <EditFile id={original.id} name={original.name} />
               <PreviewFile signed={original.signed} name={original.name} />
               <DeleteFile url={original.url} name={original.name} />
             </Fragment>
@@ -70,5 +72,7 @@ export const useFolderColumns = () => {
 };
 
 const styles = {
+  name: classes('flex', 'pl-1.5', 'items-center'),
+  title: classes('pl-2', 'truncate'),
   actions: classes('flex', 'gap-2'),
 };

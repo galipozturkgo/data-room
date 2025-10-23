@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { FolderContext } from './FolderContext';
 import { UploadStatus, useSnackbar } from '@dataroom/ui-components';
 import { v4 as uuidv4 } from 'uuid';
@@ -12,6 +12,7 @@ import {
 } from '@dataroom/ui-queries';
 import { AddFiles, SignFileParams } from '@dataroom/shared-types';
 import { DropzoneOptions, ErrorCode, FileRejection } from 'react-dropzone';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 
 interface FolderProviderProps {
   children: React.ReactNode;
@@ -24,14 +25,35 @@ export const ACCEPT_FILES = {
 };
 
 export const FolderProvider: React.FC<FolderProviderProps> = ({ children }) => {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
   const { addMessage } = useSnackbar();
   const { uploadFile } = useFileUpload();
+  const [searchParams] = useSearchParams();
   const [singFiles] = useSignFilesMutation();
   const [addFiles] = useAddFilesMutation();
   const [uploadStatus, setUploadStatus] = useState<UploadStatus>();
-
   const [activeFolder, setActiveFolder] = useState<string>('root');
   const [folderHistory, setFolderHistory] = useState<string[]>(['root']);
+
+  useEffect(() => {
+    const path = searchParams.get('path');
+
+    if (path) {
+      const pathArray = path.split('^').filter(Boolean);
+
+      if (pathArray.length > 0) {
+        setFolderHistory(pathArray);
+        setActiveFolder(pathArray[pathArray.length - 1]);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    searchParams.set('path', folderHistory.join('^'));
+    const newUrl = `${pathname}?${searchParams.toString()}`;
+    navigate(newUrl, { replace: true });
+  }, [folderHistory]);
 
   const changeFolder = useCallback((folder: string) => {
     setActiveFolder(folder);

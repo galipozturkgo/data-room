@@ -1,5 +1,5 @@
 import { CopyObjectCommand, PutObjectCommandInput } from '@aws-sdk/client-s3';
-import { extractFileExtension } from '@dataroom/shared-utils';
+import { parseFileName } from '@dataroom/shared-utils';
 import { v4 as uuidv4 } from 'uuid';
 
 import { getEnv } from '../envs/Envs';
@@ -16,7 +16,7 @@ export const copyObject = async ({
   prefix,
   options = {},
 }: CopyObject) => {
-  const ext = extractFileExtension(source);
+  const { ext } = parseFileName(source);
 
   const key = `${prefix.replace(/^\/|\/$/g, '')}/${uuidv4()}.${ext}`;
 

@@ -2,12 +2,13 @@ import { classes, classNames } from '@dataroom/ui-utils';
 
 import { BrandLogoProps } from './BrandLogo.types';
 
-const BrandLogoBase: React.FC<BrandLogoProps> = ({ className }) => {
+const BrandLogoBase: React.FC<BrandLogoProps> = ({ onClick, className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 1709 1456"
+      onClick={onClick}
       className={classNames(styles.brand, className)}
     >
       <mask

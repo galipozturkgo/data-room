@@ -15,8 +15,8 @@ export const useFileDropzone = (args?: FileDropzoneProps) => {
 
   return useDropzone({
     accept: ACCEPT_FILES,
-    multiple: false,
     maxSize: MAX_SIZE,
+    multiple: true,
     noKeyboard: true,
     noClick: args?.noClick,
     onDrop: (files, rejections, event) => {
