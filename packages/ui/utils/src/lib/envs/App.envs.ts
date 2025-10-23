@@ -4,6 +4,7 @@ export type AppEnvironments = {
   APP: string;
   PROD: boolean;
   API_URL: string;
+  S3_URL: string;
 };
 
 const getEnv = (key: string): string => import.meta.env[key] as string;
@@ -18,6 +19,10 @@ class AppEnvironemnt {
       if (!getEnv('VITE_API_URL')) {
         throw new Error('VITE_API_URL required');
       }
+
+      if (!getEnv('VITE_S3_URL')) {
+        throw new Error('VITE_S3_URL required');
+      }
     }
   }
 
@@ -31,6 +36,10 @@ class AppEnvironemnt {
 
   get API_URL() {
     return getEnv('VITE_API_URL');
+  }
+
+  get S3_URL() {
+    return getEnv('VITE_S3_URL');
   }
 }
 

@@ -1,41 +1,19 @@
-import { FileModel } from '@dataroom/api-models';
 import {
   getObject,
-  PutObject,
   putObject,
+  PutObjectParams,
   signUrl,
-  StorageClient,
 } from '@dataroom/api-utils';
 
-type AddFile = PutObject & {
-  user: string;
-  folder: string;
-  sign?: boolean;
-};
-
-export const addFile = async ({
-  user,
+export const signFile = async ({
   folder,
-  prefix,
   name,
   type,
   options = {},
-}: AddFile): Promise<{ key: string; signed: string }> => {
-  const { key, command } = putObject({ prefix, name, type, options });
-
-  if (options.Body) {
-    await StorageClient.send(command);
-  }
+}: PutObjectParams): Promise<{ key: string; signed: string }> => {
+  const { key, command } = putObject({ folder, name, type, options });
 
   const signed = await signUrl({ command });
-
-  await FileModel.add({
-    user,
-    folder,
-    key,
-    type,
-    name,
-  }).save();
 
   return { key, signed };
 };

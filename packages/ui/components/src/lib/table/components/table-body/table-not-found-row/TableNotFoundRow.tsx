@@ -7,17 +7,22 @@ import { NoDataIcon } from '../../../../icon/components/NoData';
 import { TableNotFoundRowProps } from './TableNotFoundRow.types';
 
 const TableNotFoundRowBase: React.FC<TableNotFoundRowProps> = ({
+  colSpan,
+  children,
   className,
 }) => {
   return (
     <tr className={styles.tr}>
-      <td colSpan={50} className={classNames(styles.td, className)}>
-        <Feedback
-          color="muted"
-          title="Data not found"
-          icon={<NoDataIcon />}
-          className={styles.feedback}
-        />
+      <td colSpan={colSpan ?? 50} className={classNames(styles.td, className)}>
+        {children ?? (
+          <Feedback
+            color="muted"
+            title="Data not found"
+            border={false}
+            icon={<NoDataIcon />}
+            className={styles.feedback}
+          />
+        )}
       </td>
     </tr>
   );
@@ -25,7 +30,7 @@ const TableNotFoundRowBase: React.FC<TableNotFoundRowProps> = ({
 
 const styles = {
   tr: classes('w-full'),
-  td: classes('bg-skin-silent'),
+  td: classes('w-full'),
   feedback: classes('h-40', 'rounded-none', 'items-center', 'justify-center'),
 };
 

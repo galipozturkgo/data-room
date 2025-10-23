@@ -26,7 +26,7 @@ export const TableProvider = <T extends TableData = Record<string, unknown>>({
   const [globalFilter, setGlobalFilter] = useState<string>('');
   const [pagination, setPagination] = useState({
     pageIndex: 0,
-    pageSize: 20,
+    pageSize: 50,
   });
 
   const changeFilter = (keyword: string) => setGlobalFilter(keyword);

@@ -1,12 +1,12 @@
 import { baseApi } from '../base/query/Api';
 import { addFolder } from './AddFolder.api';
 import { deleteFolder } from './DeleteFolder.api';
-import { folders } from './Folders.api';
+import { folder } from './Folder.api';
 import { updateFolder } from './UpdateFolder.api';
 
 export const fontEndpoints = baseApi.injectEndpoints({
   endpoints: (builder) => ({
-    folders: folders(builder),
+    folder: folder(builder),
     addFolder: addFolder(builder),
     updateFolder: updateFolder(builder),
     deleteFolder: deleteFolder(builder),
@@ -14,8 +14,7 @@ export const fontEndpoints = baseApi.injectEndpoints({
 });
 
 export const {
-  useFoldersQuery,
-  useLazyFoldersQuery,
+  useFolderQuery,
   useAddFolderMutation,
   useUpdateFolderMutation,
   useDeleteFolderMutation,

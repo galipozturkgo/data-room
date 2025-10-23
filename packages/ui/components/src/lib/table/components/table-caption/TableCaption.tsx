@@ -33,10 +33,10 @@ const TableCaptionBase: React.FC<TableCaptionProps> = ({
 };
 
 const styles = {
-  root: classes('text-start', 'py-3'),
+  root: classes('text-start', 'py-3', 'px-2'),
   title: classes('flex', 'items-center', 'space-x-3'),
   container: classes('flex', 'justify-between', 'items-end'),
-  head: classes('flex', 'items-center', 'space-x-3'),
+  head: classes('flex', 'items-center', 'w-full', 'space-x-3'),
 };
 
 export const TableCaption = TableCaptionBase;

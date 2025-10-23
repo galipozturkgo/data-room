@@ -4,14 +4,14 @@ export enum Buckets {
 }
 
 export type SignFileParams = {
-  prefix: string;
+  id: string;
+  folder: string;
   name: string;
   type: string;
-  folder: string;
 };
 
 export type SingedFile = {
-  name: string;
+  id: string;
   key: string;
   signed: string;
 };

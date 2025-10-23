@@ -9,4 +9,5 @@ export const deleteFile = (builder: Builder) =>
       method: 'DELETE',
       body,
     }),
+    invalidatesTags: (res, err) => (!err && ['File']) || [],
   });

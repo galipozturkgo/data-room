@@ -4,17 +4,22 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { getEnv } from '../envs/Envs';
 
-export type PutObject = {
-  prefix: string;
+export type PutObjectParams = {
+  folder: string;
   name: string;
   type: string;
   options?: Pick<PutObjectCommandInput, 'ACL' | 'Body'>;
 };
 
-export const putObject = ({ prefix, name, type, options = {} }: PutObject) => {
+export const putObject = ({
+  folder,
+  name,
+  type,
+  options = {},
+}: PutObjectParams) => {
   const ext = extractFileExtension(name);
 
-  const key = `${prefix.replace(/^\/|\/$/g, '')}/${uuidv4()}.${ext}`;
+  const key = `${folder.replace(/^\/|\/$/g, '')}/${uuidv4()}.${ext}`;
 
   const command = new PutObjectCommand({
     Bucket: getEnv('S3_BUCKET_NAME'),

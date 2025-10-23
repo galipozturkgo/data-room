@@ -1,7 +1,7 @@
 import { Button, Popover, PlusIcon } from '@dataroom/ui-components';
-import { Fragment } from 'react/jsx-runtime';
 import AddFolder from '../add-folder/AddFolder';
 import { classes } from '@dataroom/ui-utils';
+import AddFile from '../add-file/AddFile';
 
 const AddItem = () => {
   return (
@@ -13,7 +13,7 @@ const AddItem = () => {
           variant="outlined"
           startIcon={<PlusIcon />}
         >
-          Add
+          Add item
         </Popover.Button>
         <Popover.Panel
           floating={{
@@ -22,9 +22,10 @@ const AddItem = () => {
           className={styles.panel}
         >
           {({ close }) => (
-            <Fragment>
+            <Popover.Content>
+              <AddFile onClose={close} />
               <AddFolder onClose={close} />
-            </Fragment>
+            </Popover.Content>
           )}
         </Popover.Panel>
       </Popover.Group>

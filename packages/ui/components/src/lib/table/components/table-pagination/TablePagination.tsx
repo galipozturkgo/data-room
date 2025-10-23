@@ -1,14 +1,15 @@
 'use client';
 
-import { classes } from '@dataroom/ui-utils';
+import { classes, classNames } from '@dataroom/ui-utils';
 
 import { PaginationButton } from './pagination-button/PaginationButton';
 import { PaginationInfo } from './pagination-info/PaginationInfo';
 import { PaginationShown } from './pagination-shown/PaginationShown';
+import { TablePaginationProps } from './TablePagination.types';
 
-const TablePaginationBase = () => {
+const TablePaginationBase: React.FC<TablePaginationProps> = ({ className }) => {
   return (
-    <div className={styles.root}>
+    <div className={classNames(styles.root, className)}>
       <PaginationButton />
       <PaginationInfo />
       <PaginationShown />
@@ -19,9 +20,9 @@ const TablePaginationBase = () => {
 const styles = {
   root: classes(
     'flex',
-    'gap-2',
     'items-center',
     'justify-end',
+    'gap-3',
     'text-sm',
     'p-4',
   ),

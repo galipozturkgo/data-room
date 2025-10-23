@@ -4,10 +4,10 @@ import { useHttp } from '../http/useHttp';
 
 type UploadStatus = 'success' | 'failed' | number;
 
-interface UploadFileItem {
+export type UploadFileItem = {
   url: string;
   file: File;
-}
+};
 
 interface UploadArgs {
   file: UploadFileItem[] | UploadFileItem;

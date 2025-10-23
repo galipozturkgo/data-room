@@ -42,7 +42,6 @@ const styles = {
     'gap-3',
     'items-center',
     'text-skin-muted',
-    'w-64',
     'justify-center',
   ),
   input: classes('w-16'),

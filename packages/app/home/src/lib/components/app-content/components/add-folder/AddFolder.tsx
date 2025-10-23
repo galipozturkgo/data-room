@@ -1,4 +1,4 @@
-import { MenuButton, PlusIcon, Popover } from '@dataroom/ui-components';
+import { FolderAddIcon, MenuButton, Popover } from '@dataroom/ui-components';
 import AddFolderForm from '../add-folder-form/AddFolderForm';
 import { classes } from '@dataroom/ui-utils';
 import { AddFolderProps } from './AddFolder.types';
@@ -6,8 +6,8 @@ import { AddFolderProps } from './AddFolder.types';
 const AddFolder: React.FC<AddFolderProps> = ({ onClose }) => {
   return (
     <Popover>
-      <Popover.Button as={MenuButton} icon={<PlusIcon />}>
-        Add new folder
+      <Popover.Button as={MenuButton} icon={<FolderAddIcon />}>
+        Add folder
       </Popover.Button>
       <Popover.Panel
         floating={{

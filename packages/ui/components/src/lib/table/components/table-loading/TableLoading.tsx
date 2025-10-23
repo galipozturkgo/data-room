@@ -17,7 +17,7 @@ const TableLoadingBase: React.FC<TableLoadingProps> = ({ isLoading }) => {
 
 const styles = {
   root: classes('absolute', 'top-0', 'bottom-0', 'z-10', 'bg-skin-base/40'),
-  spinner: classes('absolute', 'top-[52.5%]'),
+  spinner: classes('absolute', 'top-[52.5%]', 'text-skin-accent'),
 };
 
 export const TableLoading = TableLoadingBase;

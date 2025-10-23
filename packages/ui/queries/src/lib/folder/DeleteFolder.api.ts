@@ -8,5 +8,5 @@ export const deleteFolder = (builder: Builder) =>
       url: `/folder/delete/${id}`,
       method: 'DELETE',
     }),
-    invalidatesTags: (res, err) => (!err && ['Folders']) || [],
+    invalidatesTags: (res, err) => (!err && ['Folder']) || [],
   });

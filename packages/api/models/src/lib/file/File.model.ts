@@ -1,26 +1,25 @@
 import { deleteObject } from '@dataroom/api-utils';
 import mongoose from 'mongoose';
 
+import { FolderDoc } from '../folder';
 import { UserDoc } from '../user/User.model';
 
 interface FileAttrs {
   user: UserDoc | string;
-  folder: string;
+  folder: FolderDoc | string;
   key: string;
   name: string;
   type: string;
-  unbound?: boolean;
-  deleted?: boolean;
+  size: number;
 }
 
 export interface FileDoc extends mongoose.Document {
   user: UserDoc | string;
-  folder: string;
+  folder: FolderDoc | string;
   key: string;
   name: string;
   type: string;
-  deleted?: boolean;
-  deletedAt?: Date;
+  size: number;
   createdAt: Date;
 }
 
@@ -51,8 +50,7 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  deleted: Boolean,
-  deletedAt: mongoose.Schema.Types.Date,
+  size: Number,
   createdAt: {
     type: mongoose.Schema.Types.Date,
     required: true,

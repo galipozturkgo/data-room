@@ -1,15 +1,21 @@
 import { baseApi } from '../base/query/Api';
+import { addFiles } from './AddFiles.api';
 import { deleteFile } from './DeleteFile.api';
-import { getFile } from './GetFile.api';
-import { signFile } from './SignFile.api';
+import { files } from './Files.api';
+import { signFiles } from './SignFiles.api';
 
 export const fileEndpoints = baseApi.injectEndpoints({
   endpoints: (builder) => ({
+    files: files(builder),
+    signFiles: signFiles(builder),
+    addFiles: addFiles(builder),
     deleteFile: deleteFile(builder),
-    getFile: getFile(builder),
-    signFile: signFile(builder),
   }),
 });
 
-export const { useDeleteFileMutation, useGetFileQuery, useSignFileMutation } =
-  fileEndpoints;
+export const {
+  useFilesQuery,
+  useSignFilesMutation,
+  useAddFilesMutation,
+  useDeleteFileMutation,
+} = fileEndpoints;

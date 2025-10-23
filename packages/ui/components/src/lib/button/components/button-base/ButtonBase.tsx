@@ -37,6 +37,7 @@ const BaseButtonBase = <T extends React.ElementType = 'button'>(
     if (innerLoading) {
       return event.preventDefault();
     }
+
     if (onClick) {
       if (onClick.constructor.name === 'AsyncFunction') {
         setExecuting(true);

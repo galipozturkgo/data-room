@@ -9,5 +9,5 @@ export const addFolder = (builder: Builder) =>
       method: 'POST',
       body,
     }),
-    invalidatesTags: (res, err) => (!err && ['Folders']) || [],
+    invalidatesTags: (res, err) => (!err && ['Folder']) || [],
   });

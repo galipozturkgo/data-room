@@ -14,15 +14,14 @@ const FolderBreadcrumb = () => {
         return (
           <div key={folder} className={styles.item}>
             <LinkButton
-              color={isLast ? 'primary' : 'muted'}
-              disabled={isLast}
-              className={classNames(styles.button, isLast && styles.active)}
+              color={isLast ? 'primary' : 'accent'}
+              className={classNames(isLast && styles.active)}
               onClick={() => !isLast && changeFolder(folder)}
             >
               {isRoot ? 'Root' : folder}
             </LinkButton>
 
-            {!isLast && <RightIcon className="" />}
+            {!isLast && <RightIcon className="text-skin-muted" />}
           </div>
         );
       })}
@@ -41,7 +40,6 @@ const styles = {
     'bg-skin-accent/20',
   ),
   item: classes('flex', 'items-center'),
-  button: classes('text-base'),
   active: classes('font-semibold'),
 };
 

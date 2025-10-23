@@ -10,5 +10,5 @@ export const updateFolder = (builder: Builder) =>
       body,
     }),
     invalidatesTags: (res, err, { id }) =>
-      (!err && ['Folders', { type: 'Folders', id }]) || [],
+      (!err && ['Folder', { type: 'Folder', id }]) || [],
   });

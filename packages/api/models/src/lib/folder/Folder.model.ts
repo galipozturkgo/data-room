@@ -31,10 +31,7 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  parent: {
-    type: String,
-    required: true,
-  },
+  parent: String,
   createdAt: {
     type: mongoose.Schema.Types.Date,
     required: true,

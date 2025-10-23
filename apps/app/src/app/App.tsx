@@ -3,7 +3,12 @@ import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter
+      future={{
+        v7_relativeSplatPath: false,
+        v7_startTransition: false,
+      }}
+    >
       <Loader />
     </BrowserRouter>
   );
