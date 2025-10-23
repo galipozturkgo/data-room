@@ -31,7 +31,8 @@
         "packages/shared/utils/*",
         "packages/api/models/*",
         "packages/api/routes/*",
-        "packages/api/utils/*"
+        "packages/api/utils/*",
+        "packages/dev/executors/*"
       ]
     },
     {
@@ -73,7 +74,8 @@
         "packages/shared/utils/*",
         "packages/api/models/*",
         "packages/api/routes/*",
-        "packages/api/utils/*"
+        "packages/api/utils/*",
+        "packages/dev/executors/*"
       ],
       "options": {
         "typecheck": {

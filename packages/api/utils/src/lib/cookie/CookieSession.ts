@@ -8,8 +8,6 @@ export const cookieSession = (
   session({
     httpOnly: true,
     keys: [getEnv('COOKIE_SECRET_KEY')],
-    domain: getEnv('DOMAIN'),
-    secure: getEnv('PROD'),
     expires: new Date(2147483647 * 1000),
     ...options,
   });

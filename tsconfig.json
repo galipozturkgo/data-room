@@ -53,6 +53,9 @@
     },
     {
       "path": "./packages/app/signup"
+    },
+    {
+      "path": "./packages/dev/executors"
     }
   ]
 }

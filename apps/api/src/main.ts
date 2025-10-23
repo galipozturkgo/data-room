@@ -76,6 +76,10 @@ const start = async () => {
 const host = getEnv('HOST') ?? 'localhost';
 const port = getEnv('PORT') ? getEnv('PORT') : 3000;
 
+console.log('host', host);
+
+console.log('port', port);
+
 start();
 
 http.listen(port, host, async () => {

@@ -120,6 +120,7 @@
     "packages/api/utils",
     "packages/app/*",
     "packages/shared/*",
-    "packages/ui/*"
+    "packages/ui/*",
+    "packages/dev/*"
   ]
 }

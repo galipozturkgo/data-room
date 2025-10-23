@@ -94,6 +94,17 @@
             "buildTarget": "@dataroom/api:build:production"
           }
         }
+      },
+      "deploy": {
+        "dependsOn": [
+          "build"
+        ],
+        "executor": "@dataroom/dev-executors:deploy",
+        "options": {
+          "dockerfile": "apps/api/Dockerfile",
+          "name": "dataroom-api",
+          "tag": "latest"
+        }
       }
     },
     "tags": [

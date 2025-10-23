@@ -1,4 +1,4 @@
-import { useNotifications } from '@dataroom/ui-components';
+import { useNotification } from '@dataroom/ui-components';
 
 import { accountAlreadyExists } from './components/AccountAlreadyExists';
 import { accountNotFound } from './components/AccountNotFound';
@@ -12,5 +12,17 @@ const notifications = {
   SomethingWentWrong: somethingWentWrong,
 };
 
-export const useAuthNotifications = () =>
-  useNotifications<typeof notifications>(notifications);
+type NotificationsMap = typeof notifications;
+
+export const useAuthNotifications = () => {
+  const { addNotification } = useNotification();
+
+  return <T extends keyof NotificationsMap>(
+    key: T,
+    ...params: Parameters<NotificationsMap[T]>
+  ) => {
+    const notificationFn = notifications[key] as any;
+
+    addNotification(notificationFn(...params));
+  };
+};

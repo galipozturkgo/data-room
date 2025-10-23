@@ -5,6 +5,19 @@
   "nx": {
     "tags": [
       "apps:app"
-    ]
+    ],
+    "targets": {
+      "deploy": {
+        "dependsOn": [
+          "build"
+        ],
+        "executor": "@dataroom/dev-executors:deploy",
+        "options": {
+          "dockerfile": "apps/app/Dockerfile",
+          "name": "dataroom-app",
+          "tag": "latest"
+        }
+      }
+    }
   }
 }
