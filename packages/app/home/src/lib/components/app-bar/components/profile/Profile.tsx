@@ -22,7 +22,7 @@ const Profile = () => {
     <div className={styles.root}>
       <span>{[user?.firstName, user?.lastName].join(' ')}</span>
       <Button
-        color="accent"
+        color="primary"
         variant="contained"
         className={styles.button}
         endIcon={<LogoutIcon />}
@@ -40,15 +40,14 @@ const styles = {
     'flex',
     'flex-col',
     'items-center',
-    'bg-skin-primary',
-    'p-2',
+    'bg-skin-accent/50',
+    'p-1',
     'rounded-2xl',
-    'space-y-2',
+    'space-y-1',
     'border',
-    'border-skin-primary/15',
-    'text-skin-inverted',
+    'border-skin-primary/10',
   ),
-  button: classes('w-full', 'justify-start', 'shadow-xl'),
+  button: classes('w-full', 'justify-start'),
 };
 
 export default Profile;
