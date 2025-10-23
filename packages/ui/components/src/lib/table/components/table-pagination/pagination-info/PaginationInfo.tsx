@@ -43,6 +43,7 @@ const styles = {
     'items-center',
     'text-skin-muted',
     'justify-center',
+    'truncate',
   ),
   input: classes('w-16'),
   info: classes('flex', 'items-center', 'gap-1'),

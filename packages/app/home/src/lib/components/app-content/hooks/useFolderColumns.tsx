@@ -22,7 +22,7 @@ export const useFolderColumns = () => {
           <NavigateFolder name={original.name} />
         ) : (
           <div className={styles.name}>
-            <FileIcon />
+            <FileIcon className="min-w-fit" />
             <span className={styles.title}>{original.name}</span>
           </div>
         ),
